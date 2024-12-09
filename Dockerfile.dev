@@ -2,7 +2,7 @@ FROM node:20-alpine
 
 # Add user with the same UID/GID as the host system user
 RUN addgroup -g 1001 appuser && \
-    adduser -u 1000 -G appuser -s /bin/sh -D appuser
+    adduser -u 1001 -G appuser -s /bin/sh -D appuser
 
 WORKDIR /app
 
