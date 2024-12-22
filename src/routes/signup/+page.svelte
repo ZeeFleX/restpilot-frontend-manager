@@ -5,38 +5,43 @@
 	import { Label } from '$lib/components/ui/label/index.js';
 </script>
 
-<div class="container mx-auto min-h-dvh flex items-center">
+<div class="container mx-auto flex min-h-dvh flex-col pt-32">
 	<Card.Root class="mx-auto max-w-sm">
 		<Card.Header>
-			<Card.Title class="text-xl">Sign Up</Card.Title>
-			<Card.Description>Enter your information to create an account</Card.Description>
+			<Card.Title class="text-xl">Регистрация</Card.Title>
+			<Card.Description>Введите основную информацию о Вашей компании</Card.Description>
 		</Card.Header>
 		<Card.Content>
 			<div class="grid gap-4">
-				<div class="grid grid-cols-2 gap-4">
-					<div class="grid gap-2">
-						<Label for="first-name">First name</Label>
-						<Input id="first-name" placeholder="Max" required />
-					</div>
-					<div class="grid gap-2">
-						<Label for="last-name">Last name</Label>
-						<Input id="last-name" placeholder="Robinson" required />
-					</div>
+				<div class="grid gap-2">
+					<Label for="phone">Телефон для входа</Label>
+					<Input id="phone" placeholder="+7" required />
 				</div>
 				<div class="grid gap-2">
-					<Label for="email">Email</Label>
-					<Input id="email" type="email" placeholder="m@example.com" required />
+					<Label for="email">Email (для уведомлений)</Label>
+					<Input id="email" type="email" placeholder="mycompany@example.com" required />
 				</div>
 				<div class="grid gap-2">
 					<Label for="password">Password</Label>
 					<Input id="password" type="password" />
 				</div>
-				<Button type="submit" class="w-full">Create an account</Button>
-				<Button variant="outline" class="w-full">Sign up with GitHub</Button>
+				<div class="grid gap-2">
+					<Label for="name">Наименование компании</Label>
+					<Input id="name" type="name" placeholder="Введите наименование юр.лица" required />
+				</div>
+				<div class="grid gap-2">
+					<Label for="name">ИНН</Label>
+					<Input id="name" type="name" placeholder="Введите ИНН" required />
+				</div>
+				<div class="grid gap-2">
+					<Label for="name">Адрес регистрации</Label>
+					<Input id="name" type="name" placeholder="Введите адрес регистрации" required />
+				</div>
+				<Button type="submit" class="w-full">Создать аккаунт</Button>
 			</div>
 			<div class="mt-4 text-center text-sm">
-				Already have an account?
-				<a href="/signin" class="underline"> Sign in </a>
+				Уже есть действующий аккаунт?
+				<a href="/signin" class="underline">Войти</a>
 			</div>
 		</Card.Content>
 	</Card.Root>

@@ -1,0 +1,91 @@
+"""
+Indicates exactly one field must be supplied and this field must not be `null`.
+"""
+directive @oneOf on INPUT_OBJECT
+
+type CompanyEntity {
+  """Company address"""
+  address: String!
+
+  """Company creation date"""
+  createdAt: DateTime
+  id: ID!
+
+  """Company name"""
+  name: String!
+}
+
+input CompanySignUpInput {
+  address: String!
+  name: String!
+  password: String!
+  phone: String!
+}
+
+type CompanySignUpOutput {
+  """Company data"""
+  company: CompanyEntity!
+
+  """User data"""
+  user: SignUpOutput!
+}
+
+input CreateMenuCategoryInput {
+  """Name of menu category"""
+  name: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type MenuCategoryEntity {
+  """Unique ID of menu category"""
+  id: String!
+
+  """Name of category"""
+  name: String!
+}
+
+type Mutation {
+  companySignUp(companySignUpInput: CompanySignUpInput!): CompanySignUpOutput!
+  createMenuCategory(createMenuCategoryInput: CreateMenuCategoryInput!): MenuCategoryEntity!
+  signIn(signInInput: SignInInput!): SignInOutput!
+  signUp(signUpInput: SignUpInput!): SignUpOutput!
+}
+
+type Query {
+  menuCategories: [MenuCategoryEntity!]!
+}
+
+type Role {
+  name: String!
+}
+
+input SignInInput {
+  password: String!
+  phone: String!
+}
+
+type SignInOutput {
+  """JWT access token"""
+  accessToken: String!
+}
+
+input SignUpInput {
+  password: String!
+  phone: String!
+}
+
+type SignUpOutput {
+  """User creation date"""
+  createdAt: DateTime
+  id: ID!
+
+  """User phone number"""
+  phone: String!
+
+  """User role"""
+  role: Role
+}
