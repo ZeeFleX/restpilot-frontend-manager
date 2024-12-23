@@ -9,9 +9,10 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-		alias: {
-			$houdini: '.houdini/'
-		}
+		alias: {}
+	},
+	transformMode: {
+		web: [/\.svelte$/, /\.[jt]s$/]
 	}
 };
 
