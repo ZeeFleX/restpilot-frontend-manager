@@ -1,5 +1,3 @@
-import UserStore from "./user.store";
+import AuthStore from './auth';
 
-export {
-    UserStore
-}
+export { AuthStore };

@@ -12,15 +12,15 @@
 	import { field, form } from 'svelte-forms';
 	import { pattern, required } from 'svelte-forms/validators';
 
-	const phone = field('phone', '', [pattern(/^(?:\+?[7-8])?[0-9]{10}$/)], { checkOnInit: true });
+	const phone = field('phone', '', [pattern(/^7\d{10}$/)], { checkOnInit: true });
 	const password = field('password', '', [required()], { checkOnInit: true });
-	const signinForm = form(phone, password);
+	const signInForm = form(phone, password);
 
 	let menuCategories: ReadableResult<{ menuCategories: MenuEntities.Category[] }> =
 		query(MENU_CATEGORIES_QUERY);
 
 	const onSubmit = () => {
-		console.log($signinForm);
+		console.log($signInForm);
 	};
 </script>
 
@@ -43,17 +43,17 @@
 		<Card.Content>
 			<div class="grid gap-4">
 				<div class="grid gap-2">
-					<Label for="phone">Телефон</Label>
+					<Label for="phone">Телефон <span class="text-red-500">*</span></Label>
 					<Input id="phone" type="phone" placeholder="+7" required bind:value={$phone.value} />
 				</div>
 				<div class="grid gap-2">
 					<div class="flex items-center">
-						<Label for="password">Пароль</Label>
+						<Label for="password">Пароль <span class="text-red-500">*</span></Label>
 						<a href="##" class="ml-auto inline-block text-sm underline">Забыли пароль?</a>
 					</div>
 					<Input id="password" type="password" required bind:value={$password.value} />
 				</div>
-				<Button onclick={onSubmit} disabled={!$signinForm.valid} type="submit" class="w-full"
+				<Button onclick={onSubmit} disabled={!$signInForm.valid} type="submit" class="w-full"
 					>Войти</Button
 				>
 			</div>

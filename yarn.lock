@@ -3603,6 +3603,11 @@ map-or-similar@^1.5.0:
   resolved "https://registry.yarnpkg.com/map-or-similar/-/map-or-similar-1.5.0.tgz#6de2653174adfb5d9edc33c69d3e92a1b76faf08"
   integrity sha512-0aF7ZmVon1igznGI4VS30yugpduQW3y3GkcgGJOp7d8x8QrizhigUxjI/m2UojsXXto+jLAH3KSz+xOJTiORjg==
 
+maska@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/maska/-/maska-3.0.4.tgz#99fd55a27c4e10130f7eaaf21f484f5a6ca0bd24"
+  integrity sha512-+lXmPLXRM8oDvAi91UoU8OBrBjFf9n9ZH+Wn3kCWRqAJQbxeeFTq3QC2SDfr/BpBo25+vrMpoFf/r338aISpNQ==
+
 memoizerific@^1.11.3:
   version "1.11.3"
   resolved "https://registry.yarnpkg.com/memoizerific/-/memoizerific-1.11.3.tgz#7c87a4646444c32d75438570905f2dbd1b1a805a"
