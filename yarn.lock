@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@0no-co/graphql.web@^1.0.5":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@0no-co/graphql.web/-/graphql.web-1.0.12.tgz#5fab8caaf5e6dae88e31111305f93dfd152de2fb"
+  integrity sha512-BTDjjsV/zSPy5fqItwm+KWUfh9CSe9tTtR6rCB72ddtkAxdcHbi4Ir4r/L1Et4lyxmL+i7Rb3m9sjLLi9tYrzA==
+
 "@adobe/css-tools@^4.4.0":
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/@adobe/css-tools/-/css-tools-4.4.1.tgz#2447a230bfe072c1659e6815129c03cf170710e3"
@@ -1820,6 +1825,22 @@
   dependencies:
     "@typescript-eslint/types" "8.15.0"
     eslint-visitor-keys "^4.2.0"
+
+"@urql/core@^5.0.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@urql/core/-/core-5.1.0.tgz#7f4b81f1aba1ca34ae6354763abeb87ff9af84ff"
+  integrity sha512-yC3sw8yqjbX45GbXxfiBY8GLYCiyW/hLBbQF9l3TJrv4ro00Y0ChkKaD9I2KntRxAVm9IYBqh0awX8fwWAe/Yw==
+  dependencies:
+    "@0no-co/graphql.web" "^1.0.5"
+    wonka "^6.3.2"
+
+"@urql/svelte@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@urql/svelte/-/svelte-4.2.2.tgz#2b026beb429d6ccb9a90e1b3bc132add4c16edc2"
+  integrity sha512-6ntLGsWcnNtaMZVmFpePfFTSpYxYpznCAqnuvLDjt7Oa7YqHcFiyPnz7IIsiPD9VE6hZSi0+RwmRk5BMba/teQ==
+  dependencies:
+    "@urql/core" "^5.0.0"
+    wonka "^6.3.2"
 
 "@vitest/expect@2.0.5":
   version "2.0.5"
@@ -3681,6 +3702,11 @@ mkdirp@^0.5.1:
   dependencies:
     minimist "^1.2.6"
 
+mode-watcher@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/mode-watcher/-/mode-watcher-0.5.0.tgz#bc733a9f05e534cc79f877cb3b5a9ce669cbc717"
+  integrity sha512-5E6fh/aXhAVv+U+DbeM0hCmskQE9u7WSmvnCRijJB/MJu7HtB73sjiCaZ9n1M8QHmzLrBFo8XBAUcWXkDm8Z9A==
+
 mri@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/mri/-/mri-1.2.0.tgz#6721480fec2a11a4889861115a48b6cbe7cc8f0b"
@@ -4660,11 +4686,6 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-svelte-apollo@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/svelte-apollo/-/svelte-apollo-0.5.0.tgz#5e8b141e2eaa1453ad9533c1128ce167bb76a78d"
-  integrity sha512-B4RoSAGGeuQS8pgoo5wQ+41DonoEewHkcx6qH6zjsd2nOZNNVETVRLleTph9rRmHuCtXZxvzupNfthWH+lG+9g==
-
 svelte-ast-print@^0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/svelte-ast-print/-/svelte-ast-print-0.4.2.tgz#e3858516d3b7bdb14b78a7732231bb88686ebdcc"
@@ -4722,6 +4743,11 @@ svelte-preprocess@^6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-6.0.3.tgz#fdc1f9dc41b6f22bf8b1f059e9f21eaaae181eeb"
   integrity sha512-PLG2k05qHdhmRG7zR/dyo5qKvakhm8IJ+hD2eFRQmMLHp7X3eJnjeupUtvuRpbNiF31RjVw45W+abDwHEmP5OA==
+
+svelte-sonner@^0.3.28:
+  version "0.3.28"
+  resolved "https://registry.yarnpkg.com/svelte-sonner/-/svelte-sonner-0.3.28.tgz#b24b3e7af924d5c50ca2e33cede1382283074abf"
+  integrity sha512-K3AmlySeFifF/cKgsYNv5uXqMVNln0NBAacOYgmkQStLa/UoU0LhfAACU6Gr+YYC8bOCHdVmFNoKuDbMEsppJg==
 
 svelte2tsx@^0.7.13:
   version "0.7.26"
@@ -5072,6 +5098,11 @@ which@^2.0.1:
   integrity sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   dependencies:
     isexe "^2.0.0"
+
+wonka@^6.3.2:
+  version "6.3.4"
+  resolved "https://registry.yarnpkg.com/wonka/-/wonka-6.3.4.tgz#76eb9316e3d67d7febf4945202b5bdb2db534594"
+  integrity sha512-CjpbqNtBGNAeyNS/9W6q3kSkKE52+FjIj7AkFlLr11s/VWGUu6a2CdYSdGxocIhIVjaW/zchesBQUKPVU69Cqg==
 
 word-wrap@^1.2.5:
   version "1.2.5"
