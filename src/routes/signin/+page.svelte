@@ -24,7 +24,7 @@
 	};
 </script>
 
-<div class="container mx-auto flex min-h-dvh flex-col pt-32">
+<div class="xs:pt-8 container mx-auto flex min-h-dvh flex-col md:pt-32">
 	<Card.Root class="mx-auto max-w-sm">
 		<Card.Header>
 			<Card.Title class="text-2xl">Авторизация</Card.Title>
