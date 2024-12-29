@@ -2,12 +2,16 @@
 	import { SignUpForm } from '$lib/components/manager';
 	import type { FormFields } from '$lib/components/manager';
 	import { AuthStore } from '$lib/stores';
+	import { goto } from '$app/navigation';
 
-	const handleSubmit = (fields: FormFields) => {
+	const handleSubmit = async (fields: FormFields) => {
 		console.log('Form submitted with fields:', fields);
 		// Здесь будет логика отправки данных на сервер
 
-		AuthStore.companySignUp(fields);
+		const company = await AuthStore.companySignUp(fields);
+		if (company) {
+			goto('/signin');
+		}
 	};
 </script>
 
